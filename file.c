@@ -5,6 +5,7 @@
 int player_write(struct player p)
 {
 	FILE *fp;
+	char *filename = "test.txt";
 	
 	fp = fopen(filename, "w");
 	if(!fp) {
@@ -12,8 +13,9 @@ int player_write(struct player p)
 		return -1;
 	}
 	
-	fprintf(fp, "%d\n%s\n%d\n",
+	fprintf(fp, "%d\n%d\n%s\n%d\n",
 		p.level,
+		p.age,
 		p.name,
 		p.job);
 	
@@ -25,6 +27,7 @@ int player_write(struct player p)
 int player_read(struct player *p)
 {
 	FILE *fp;
+	char *filename = "test.txt";
 	
 	fp = fopen(filename, "r");
 	if(!fp) {
@@ -32,8 +35,9 @@ int player_read(struct player *p)
 		return -1;
 	}
 	
-	fscanf(fp, "%d\n%d\n%d\n",
+	fscanf(fp, "%d\n%d\n%d\n%d\n",
 		&(p->level),
+		&(p->age),
 		&(p->name),
 		&(p->job));
 	
