@@ -1,76 +1,14 @@
-/* explanation : This game has created since 1 June.
- *
- * title       : Happy Story
- * 
- * Writer      : Yusuke Kato
- *               Satosi Simada
- *               Peko_chan
- * 
- * Player      : izumi tyinko-beru
- *               Naoya Tarumi
- * 
- * date        : June. 1,2,
- */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-#include <windows.h>
-#include "file.h"
-
-//int make_charactor(char *name, int *age, int *sex, int *job);
-
-
-//void main(void)
-void main_sub(void)
+int XXX(void)
 {
-	char name[1000];
-	int age, sex, job;
 	int story;
+	char name[10];
 	int skill;
-	char buf[1024];
-	char c;
 	
-start_game:
-    
-	system("cls");
-	printf("ゲームを開始します。\n");
-	//make_charactor(name, &age, &sex, &job);
-	
-	/*
-	double d;
-	
-	while(1) {
-		d = rand();
-		printf("%lf\n", d);
-	}
-	*/
-	printf("%d\n", job);
-	switch(job) {
-	case 7: /* 藤原 */
-		Fujiwara();
-		break;
-	case 0:
-		break;
-	case 1:
-		break;
-	case 2:
-		break;
-	case 3:
-		break;
-	case 4:
-		break;
-	case 5:
-		break;
-	default: /* その他 */
-		printf("%s は目が覚めた。暗く湿った部屋のベットの上。\n"
-		       "知っている場所ではない。\n"
-			   "頭がズキズキするし、記憶も曖昧だ。\n\n"
-			   "なにをしようか？", name);
-		break;
-	}
-	goto start_game;
+	printf("%s は目が覚めた。暗く湿った部屋のベットの上。\n"
+	   "知っている場所ではない。\n"
+	   "頭がズキズキするし、記憶も曖昧だ。\n\n"
+	   "なにをしようか？", name);
 	
 	printf("「選択」\n");
 	printf("1: 旅にでる\n"
@@ -130,7 +68,6 @@ start_game:
 		//system("cls");
 		printf("Please push any key...\n");
 		scanf("%s", name);
-		goto start_game;
 		
 		break;
 	}
@@ -138,5 +75,3 @@ start_game:
 	
 	return ;
 }
-
-

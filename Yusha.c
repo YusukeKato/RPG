@@ -3,15 +3,13 @@
  *
  *writer:  Yusuke Kato
  */
- 
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include<math.h>
 #include<windows.h>
 #include "file.h"
- 
-int Yusha();
 
 int Yusha()
 {
@@ -19,13 +17,13 @@ int Yusha()
 	int iti;
 	
 	printf("\n半年前に復活した魔王によって、世界は滅びようとしていた。\n"
-		   "そこで各国は、魔王討伐のために軍隊を向かわせたが、\n"
-		   "魔王軍の前では無力であった。\n"
-		   "何とかしなくてはと考えた国王は”伝説の勇者”を探し出し、\n"
-		   "その者に魔王討伐を託すことにした。\n\n\n\n");
-		   
+	            "そこで各国は、魔王討伐のために軍隊を向かわせたが、\n"
+	            "魔王軍の前では無力であった。\n"
+	            "何とかしなくてはと考えた国王は”伝説の勇者”を探し出し、\n"
+	            "その者に魔王討伐を託すことにした。\n\n\n\n");
+	
 	printf("%s は目覚めた。窓から入ってくる太陽の光がまぶしい。\n"
-		   "布団から出ると誰かが自分を呼ぶ声がする。\n\n\n", p.name);
+	            "布団から出ると誰かが自分を呼ぶ声がする。\n\n\n", p.name);
 		   
 	printf("誰が呼んでいるか[選択]\n");
 	
@@ -34,7 +32,7 @@ int Yusha()
 	       "3: 愛猫のミケ\n"
 	       "4: となりの山田さん\n");
 	       
-	scanf("%d",&iti);
+	scanf("%d", &iti);
 	
 	if (iti == 1) {
 		printf("呼んでいるのは母のようだ。\n"
@@ -58,15 +56,14 @@ int Yusha()
 		printf("呼んでいるのはとなりの山田さんのようだ。\n"
 			   "「こんにちは！！山田さん、どうしたんですか。\n"
 			   " 山田さん・・・？ 黙ったままで、何かあったんですか。\n"
-			   " 
 			   );
 	}
-			   
+
 	
 	player_write(p);
 	
 	printf("Please any key.\n");
-	c = fgetc(stdin);	   
+	c = fgetc(stdin);
 	
 	return;
  }
