@@ -1,7 +1,8 @@
-/*day   :20150602
- *Yusha
+/*
+ * Date   : 20150602
+ * Name   : Yusha
  *
- *writer:  Yusuke Kato
+ * Writer:  Yusuke Kato
  */
  
 #include<stdio.h>
