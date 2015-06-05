@@ -5,7 +5,7 @@
 int player_write(struct player p)
 {
 	FILE *fp;
-	char *filename = "test.txt";
+	char *filename = "RPG_save_data.txt";
 	
 	fp = fopen(filename, "w");
 	if(!fp) {
@@ -13,12 +13,13 @@ int player_write(struct player p)
 		return -1;
 	}
 	
-	fprintf(fp, "%d\n%s\n%d\n%d\n%d\n",
+	fprintf(fp, "%d\n%s\n%d\n%d\n%d\n%d\n",
 		p.level,
 		p.name,
 		p.age,
 		p.job,
-		p.sex);
+		p.sex,
+		p.money);
 	
 	fclose(fp);
 	
@@ -28,20 +29,21 @@ int player_write(struct player p)
 int player_read(struct player *p)
 {
 	FILE *fp;
-	char *filename = "test.txt";
+	char *filename = "RPG_save_data.txt";
 	
 	fp = fopen(filename, "r");
 	if(!fp) {
-		fprintf(stderr, "Error: file open\n");
+		//fprintf(stderr, "Error: file open\n");
 		return -1;
 	}
 	
-	fscanf(fp, "%d\n%s\n%d\n%d\n%d\n",
+	fscanf(fp, "%d\n%s\n%d\n%d\n%d\n%d\n",
 		&(p->level),
 		&(p->name),
 		&(p->age),
 		&(p->job),
-		&(p->sex));
+		&(p->sex),
+		&(p->money));
 	
 	fclose(fp);
 	
